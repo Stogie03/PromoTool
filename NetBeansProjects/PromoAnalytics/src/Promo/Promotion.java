@@ -12,15 +12,16 @@ import java.util.*;
  * @author adamstokes
  */
 public class Promotion {
-    public int itemKey;
+    public int[] itemKey;
     Date startDate = new Date( );
     Date endDate = new Date( );
     public String PromoTitle;
     
     
     
-    public void setItemKey(int newValue) {
+    public void setItemKey(int[] newValue) {
         itemKey = newValue;
+        
     }
     
     public void setStartDate(String newValue) {
@@ -66,7 +67,7 @@ public class Promotion {
         return endDate;
     }
     
-    public int itemKey(){
+    public int[] itemKey(){
         return itemKey;
     }
 

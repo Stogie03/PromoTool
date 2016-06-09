@@ -24,15 +24,18 @@ public class PromoAnalytics {
     public static void main(String[] args) {
        //SimpleDateFormat ft = new SimpleDateFormat ("yyyy-MM-dd");
        Promotion Promo = new Promotion();
-       Promo.setItemKey(1234);
+       int[] itemArray = {1234,34,10};
+      
+       Promo.setItemKey(itemArray);
        Promo.setStartDate("03/14/2016");
        Promo.setEndDate("04/12/2016");
        
-  
+ 
 
        
        // OUTPUT for Testing Class Methods
-       System.out.println("The Items are:" + Promo.itemKey());
+       System.out.println("The Items are: NEEDS TO BE FIXED");
+       
        System.out.println("Start Date:" + Promo.StartDate());
        System.out.println("End Date:" + Promo.EndDate());
 
