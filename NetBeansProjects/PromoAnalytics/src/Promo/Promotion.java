@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package Promo;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.*;
 /**
  *
@@ -21,11 +23,54 @@ public class Promotion {
         itemKey = newValue;
     }
     
-    public void setStartDate(Date newValue) {
-        startDate = newValue;
+    public void setStartDate(String newValue) {
+        String expectedPattern = "MM/dd/yyyy";
+        SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern); 
+        
+        try
+        {
+          Date newDate=formatter.parse(newValue);
+          startDate = newDate;  
+        }
+        catch (ParseException e)
+        {
+         // execution will come here if the String that is given
+         // does not match the expected format.
+         e.printStackTrace();
+        }
+        
     }
     
-    public void setEndDate(Date newValue) {
-        endDate = newValue;
+    public void setEndDate(String newValue) {
+        
+        String expectedPattern = "MM/dd/yyyy";
+        SimpleDateFormat formatter = new SimpleDateFormat(expectedPattern); 
+        
+        try
+        {
+          Date newDate=formatter.parse(newValue);
+          endDate = newDate;  
+        }
+        catch (ParseException e)
+        {
+         // execution will come here if the String that is given
+         // does not match the expected format.
+         e.printStackTrace();
+        }
+    }
+    public Date StartDate(){
+        return startDate;
+    }
+    
+    public Date EndDate(){
+        return endDate;
+    }
+    
+    public int itemKey(){
+        return itemKey;
+    }
+
+    public void setEndDate(int i, int i0, int i1) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
